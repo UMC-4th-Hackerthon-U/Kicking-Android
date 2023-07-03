@@ -21,6 +21,10 @@ class BoardAdapter (val boardList: ArrayList<Boards>): RecyclerView.Adapter<Boar
         }    }
 
     override fun onBindViewHolder(holder: BoardAdapter.CustomViewHolder, position: Int) {
+        holder.picture1.setImageResource(boardList.get(position).picture1)
+        holder.picture2.setImageResource(boardList.get(position).picture2)
+        holder.picture3.setImageResource(boardList.get(position).picture3)
+        holder.picture4.setImageResource(boardList.get(position).picture4)
         holder.profile.setImageResource(boardList.get(position).profile)
         holder.title.text = boardList.get(position).title.toString()
     }
@@ -30,6 +34,10 @@ class BoardAdapter (val boardList: ArrayList<Boards>): RecyclerView.Adapter<Boar
     }
 
     class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val picture1 = itemView.findViewById<ImageView>(R.id.iv_jjal1)
+        val picture2 = itemView.findViewById<ImageView>(R.id.iv_jjal2)
+        val picture3 = itemView.findViewById<ImageView>(R.id.iv_jjal3)
+        val picture4 = itemView.findViewById<ImageView>(R.id.iv_jjal4)
         val profile = itemView.findViewById<ImageView>(R.id.iv_profile) // 프로필사진
         val title = itemView.findViewById<TextView>(R.id.tv_title) // 제목
     }
