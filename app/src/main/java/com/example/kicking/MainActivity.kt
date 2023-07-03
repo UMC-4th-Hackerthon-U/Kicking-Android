@@ -1,7 +1,8 @@
 package com.example.kicking
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.kicking.best.BestFragment
 import com.example.kicking.databinding.ActivityMainBinding
 import com.example.kicking.home.HomeFragment
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.main_frm, HomeFragment())
             .commitAllowingStateLoss()
-
+        binding.mainBottomNavi.itemIconTintList = null;
         binding.mainBottomNavi.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.homeFragment -> {
@@ -28,13 +29,13 @@ class MainActivity : AppCompatActivity() {
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
-                R.id.studyingFragment -> {
+                R.id.boardFragment -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_frm, BoardFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
-                R.id.todayFragment -> {
+                R.id.bestFragment -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_frm, BestFragment())
                         .commitAllowingStateLoss()
@@ -49,5 +50,6 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
+
     }
 }

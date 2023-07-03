@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="229dp"
+    android:layout_height="114dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/best_contents"
+    >
+
+    <ImageView
+        android:id="@+id/board_profile_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/basic_profile_01"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/board_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textColor="#000000"
+        android:textSize="11sp"
+        android:layout_marginStart="7dp"
+        app:layout_constraintStart_toEndOf="@id/board_profile_iv"
+        app:layout_constraintTop_toTopOf="@id/board_profile_iv"
+        app:layout_constraintBottom_toBottomOf="@id/board_profile_iv"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/board_contents_tv"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니"
+        android:textSize="11sp"
+        android:textColor="#474747"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/board_profile_iv"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/board_bottom_cv"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/board_contents_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/board_bottom_like_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/scrap_button_none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/board_bottom_like_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="119"
+            android:textSize="11sp"
+            android:textColor="#474747"
+            android:layout_marginStart="3dp"
+            app:layout_constraintStart_toEndOf="@id/board_bottom_like_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/board_bottom_like_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개"
+            android:textSize="11sp"
+            android:textColor="#474747"
+            app:layout_constraintStart_toEndOf="@id/board_bottom_like_tv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

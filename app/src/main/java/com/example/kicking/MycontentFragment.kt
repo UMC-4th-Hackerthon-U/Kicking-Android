@@ -5,20 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.kicking.databinding.FragmentBestBinding
-import com.example.kicking.databinding.FragmentHomeBinding
+import com.example.kicking.databinding.FragmentMycontentBinding
 
-class BestFragment : Fragment() {
-    lateinit var binding : FragmentBestBinding
-
+class MycontentFragment: Fragment() {
+    private lateinit var viewBinding: FragmentMycontentBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentBestBinding.inflate(inflater, container, false)
-
-        return binding.root
+    ): View {
+        viewBinding = FragmentMycontentBinding.inflate(layoutInflater)
+        return viewBinding.root
     }
 
 }
