@@ -3,6 +3,7 @@ package com.example.kicking
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kicking.databinding.ActivityMainBinding
+import com.example.kicking.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding

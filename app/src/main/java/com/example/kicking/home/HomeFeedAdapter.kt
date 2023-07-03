@@ -1,0 +1,78 @@
+package com.example.kicking.home
+
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
+import com.example.kicking.databinding.HomefeedcardviewBinding
+import com.example.kicking.databinding.HomestorycardviewBinding
+
+class HomeFeedAdapter(private val dataList: List<FeedDto>, private val fragment: Fragment) :
+    RecyclerView.Adapter<HomeFeedAdapter.ViewHolder>() {
+    private var clickListener: OnItemClickListner? = null
+
+
+    interface OnItemClickListner {
+        fun onItemClick(view: View, position: Int)
+    }
+
+    //리스너 인터페이스 객체를 전달하는 메서드 선언
+    fun setOnItemclickListner(onItemClickListner: OnItemClickListner) {
+        itemClickListner = onItemClickListner
+    }
+
+    //전달된 객체를 저장할 변수 정의
+    private lateinit var itemClickListner: OnItemClickListner
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding =
+            HomefeedcardviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val item = dataList[position]
+        holder.bind(item)
+    }
+
+    override fun getItemCount(): Int {
+        return dataList.size
+    }
+
+    fun getItem(position: Int): FeedDto {
+        return dataList[position]
+    }
+
+
+
+    inner class ViewHolder(private val binding: HomefeedcardviewBinding) :
+        RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+
+        init {
+            binding.root.setOnClickListener(this)
+        }
+
+        fun bind(feed: FeedDto) {
+
+            binding.profileImage.setImageResource(feed.Feed_profile)
+            binding.feedImage.setImageResource(feed.Feed_id)
+            binding.profileName.text=feed.Feed_name
+            binding.feedText.text=feed.Feed_text
+            binding.likenum.text=feed.Feed_like
+            binding.commentnum.text=feed.Feed_comment
+
+
+        }
+        override fun onClick(view: View) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                //clickListener?.onItemClick(position)
+                Log.d("clicked", position.toString())
+
+            }
+
+        }
+
+    }
+}
