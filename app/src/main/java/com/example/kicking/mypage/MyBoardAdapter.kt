@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class BoardAdapter (val boardList: ArrayList<Boards>): RecyclerView.Adapter<BoardAdapter.CustomViewHolder>(){
+class MyBoardAdapter (val boardList: ArrayList<Boards>): RecyclerView.Adapter<MyBoardAdapter.CustomViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_board, parent, false)
         return CustomViewHolder(view).apply {
@@ -20,7 +20,7 @@ class BoardAdapter (val boardList: ArrayList<Boards>): RecyclerView.Adapter<Boar
             }
         }    }
 
-    override fun onBindViewHolder(holder: BoardAdapter.CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyBoardAdapter.CustomViewHolder, position: Int) {
         holder.picture1.setImageResource(boardList.get(position).picture1)
         holder.picture2.setImageResource(boardList.get(position).picture2)
         holder.picture3.setImageResource(boardList.get(position).picture3)
