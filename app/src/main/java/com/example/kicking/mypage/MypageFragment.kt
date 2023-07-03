@@ -6,19 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.kicking.base.BaseFragment
 import com.example.kicking.databinding.FragmentMypageBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MypageFragment : Fragment() {
-    lateinit var binding : FragmentMypageBinding
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentMypageBinding.inflate(inflater, container, false)
+class MypageFragment : BaseFragment<FragmentMypageBinding>(R.layout.fragment_mypage) {
+    override fun init() {
+        initAppbar(binding.mypageToolbar, "보드", false, true)
         initTab()
-        return binding.root
     }
 
     private fun initTab() {
@@ -34,5 +29,5 @@ class MypageFragment : Fragment() {
             tab.text = tabTitleArray[position]
         }.attach()
 
-    }
-}
+
+    }}

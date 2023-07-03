@@ -11,7 +11,7 @@ class MypageVPAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> MycontentFragment()
-            1 -> BoardFragment()
+            1 -> MyBoardFragment()
             else -> MycontentFragment()
         }
     }

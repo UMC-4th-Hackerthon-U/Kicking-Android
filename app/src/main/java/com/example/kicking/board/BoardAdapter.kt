@@ -15,7 +15,6 @@ class BoardAdapter (val boardList: ArrayList<Boards>): RecyclerView.Adapter<Boar
             itemView.setOnClickListener {
                 var curPos : Int = adapterPosition
                 var board : Boards = boardList.get(curPos)
-                Toast.makeText(parent.context, "제목: ${board.title}", Toast.LENGTH_SHORT).show()
 
             }
         }    }
