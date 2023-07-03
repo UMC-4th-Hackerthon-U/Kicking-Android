@@ -4,29 +4,29 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="1"
+        android:icon="@drawable/selector_home"
+        android:title="홈"
         android:enabled="true"
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/studyingFragment"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="2"
+        android:id="@+id/boardFragment"
+        android:icon="@drawable/selector_board"
+        android:title="보드"
         android:enabled="true"
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/todayFragment"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="3"
+        android:id="@+id/bestFragment"
+        android:icon="@drawable/selector_best"
+        android:title="베스트"
         android:enabled="true"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/mypageFragment"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="4"
+        android:icon="@drawable/selector_mypage"
+        android:title="MY"
         android:enabled="true"
         app:showAsAction="ifRoom"/>
 </menu>

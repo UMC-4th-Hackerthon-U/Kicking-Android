@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/menu_mypage_item" android:state_checked="false"
+        android:title="MY" />
+    <item android:drawable="@drawable/menu_mypage_selected" android:state_checked="true"
+        android:title="MY" />
+</selector>
