@@ -1,17 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
-    <TextView
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:text="HomeFragment 확인용 임시 tv입니다"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        >
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/home_layout"
+            android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:clickable="true"
+                 android:id="@+id/home_recyclerview_story"
+                 android:layout_width="0dp"
+                 android:layout_height="150dp"
+                 android:layout_marginTop="20dp"
+                 tools:itemCount="3"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/home_toolbar"
+                  />
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/home_recyclerview_feed"
+                 android:layout_width="match_parent"
+                 android:layout_height="505dp"
+                 android:background="@color/white"
+                 android:scrollbars="vertical"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/home_recyclerview_story"
+                 tools:itemCount="3" />
+
+
+             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                 android:id="@+id/fab"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="15dp"
+                 android:src="@drawable/button_fb"
+                 android:background="@color/white"
+                 android:backgroundTint="#FF3213"
+                 app:fabSize="normal"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="@+id/home_toolbar">
+
+             </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+             <include
+                 android:id="@+id/home_toolbar"
+                 layout="@layout/toolbar"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</layout>
