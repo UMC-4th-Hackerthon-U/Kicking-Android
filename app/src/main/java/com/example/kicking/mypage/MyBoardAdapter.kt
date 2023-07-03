@@ -15,10 +15,9 @@ class MyBoardAdapter (val boardList: ArrayList<Boards>): RecyclerView.Adapter<My
             itemView.setOnClickListener {
                 var curPos : Int = adapterPosition
                 var board : Boards = boardList.get(curPos)
-                Toast.makeText(parent.context, "제목: ${board.title}", Toast.LENGTH_SHORT).show()
-
             }
-        }    }
+        }
+    }
 
     override fun onBindViewHolder(holder: MyBoardAdapter.CustomViewHolder, position: Int) {
         holder.picture1.setImageResource(boardList.get(position).picture1)

@@ -57,7 +57,7 @@
             android:id="@+id/tip_bottom_like_iv"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:src="@drawable/k_button_none"
+            android:src="@drawable/talk_button_none"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

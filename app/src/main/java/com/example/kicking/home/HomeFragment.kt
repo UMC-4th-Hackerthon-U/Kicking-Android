@@ -33,10 +33,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                "어제 술 개많이 먹고 레전드 흑역사 하나찍음ㅠㅋㅠㅠ진짜 어이없고 쪽팔린데 개웃김ㅋㅋㅋ큨",
            "220개","89개","158개"),
            FeedDto(R.drawable.profile02,
-               R.drawable.feed01,
-               "이불키킹러버",
+               R.drawable.feed02,
+               "라면인건가",
                "23분전",
-               "수업시간에 자다가 우렁차게 방귀뀌면서 일어남ㅠㅠ큐큨",
+               "얘들아이게실화니....나한입도못먹었다고아진짜",
                "199개","56개","38개")
 
         )
