@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,13 +13,13 @@ import com.example.kicking.databinding.FragmentBoardBinding
 class BoardFragment : Fragment() {
     private lateinit var binding : FragmentBoardBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentBoardBinding.inflate(inflater, container, false)
-
 
         val boardList = arrayListOf(
             Boards(R.drawable.profile0, "꿀잼 흑역사 모음"),
@@ -31,6 +32,7 @@ class BoardFragment : Fragment() {
         binding.rvBoard.setHasFixedSize(true)
 
         binding.rvBoard.adapter = BoardAdapter(boardList)
+
         return binding.root
     }
 
