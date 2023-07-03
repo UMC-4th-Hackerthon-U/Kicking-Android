@@ -8,18 +8,13 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kicking.base.BaseFragment
 import com.example.kicking.databinding.FragmentBoardBinding
 
-class BoardFragment : Fragment() {
-    private lateinit var binding : FragmentBoardBinding
+class BoardFragment : BaseFragment<FragmentBoardBinding>(R.layout.fragment_board) {
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentBoardBinding.inflate(inflater, container, false)
+    override fun init() {
+        initAppbar(binding.boardToolbar, "보드", false, true)
 
         val boardList = arrayListOf(
             Boards(R.drawable.pic5, R.drawable.pic6, R.drawable.pic7, R.drawable.pic8, R.drawable.profile0, "잼민시절 킹받는 썰"),
@@ -34,7 +29,7 @@ class BoardFragment : Fragment() {
 
         binding.rvBoard.adapter = BoardAdapter(boardList)
 
-        return binding.root
     }
+
 
 }
